@@ -1,0 +1,6 @@
+# view res/layout/basicmap_activity.xml #generated:6
+-keep class com.amap.api.maps.MapView { <init>(...); }
+
+# view AndroidManifest.xml #generated:53
+-keep class com.amap.map3d.demo.basic.BasicMapActivity { <init>(...); }
+

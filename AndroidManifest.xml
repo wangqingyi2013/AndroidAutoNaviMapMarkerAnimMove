@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amap.map3d.demo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+ 
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/demo_title" >
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="请输入自己的地图key" />
+
+        <!--
+         在android4.0以上系统中的 Activity加上下面这句，可以支持地图横竖屏切换 
+         android:configChanges="orientation|keyboardHidden|screenSize"
+                               例如：
+         <activity
+            android:name=".basic.BasicMapActivity"
+            android:label="@string/basic_map"
+            android:configChanges="orientation|keyboardHidden|screenSize" /> 
+        -->
+
+        <activity
+            android:name=".basic.BasicMapActivity"
+            android:label="@string/basic_map"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
